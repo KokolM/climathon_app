@@ -66,7 +66,7 @@ class _MenuButton extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(
                   vertical: 16,
-                  horizontal: 32,
+                  horizontal: 16,
                 ),
                 child: Row(
                   children: [
@@ -121,10 +121,13 @@ class ClimathonMenu extends StatelessWidget {
             }),
           ),
           Card(
-            margin: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+            margin: const EdgeInsets.symmetric(vertical: 16, horizontal: 0),
             elevation: 2,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16.0),
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(16),
+                bottomRight: Radius.circular(16),
+              ),
             ),
             child: ConstrainedBox(
               constraints: const BoxConstraints(

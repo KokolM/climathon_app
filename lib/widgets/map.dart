@@ -102,7 +102,8 @@ class _ClimathonMapState extends State<ClimathonMap> {
     return SfMaps(
       layers: [
         MapTileLayer(
-          urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+          // urlTemplate: 'https://a.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}@2x.png',
+          urlTemplate: 'https://a.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}@2x.png',
           zoomPanBehavior: _zoomPanBehavior,
           sublayers: widget.subLayers,
         ),

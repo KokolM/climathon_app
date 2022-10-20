@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ClimathonMapInfoModel {
-  ClimathonMapInfoModel(this.key, this.color, this.size);
+class ClimathonDataModel {
+  ClimathonDataModel(this.key, this.color, this.size);
 
   final String key;
   final Color color;
