@@ -76,17 +76,9 @@ class _ClimathonSituationMapPageState extends State<ClimathonSituationMapPage> {
             ],
           ),
         ),
-        // Positioned(
-        //   bottom: 16,
-        //   right: 8,
-        //   child: ClimathonSituationMapSelectButton(
-        //     text: 'Refresh',
-        //     selected: true,
-        //     onTap: () {
-        //       context.read<ClimathonDataProvider>().loadData();
-        //     },
-        //   ),
-        // ),
+        Container(
+
+        ),
         if (_loading) const Center(child: CircularProgressIndicator()),
       ],
     );

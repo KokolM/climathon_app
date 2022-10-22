@@ -92,7 +92,7 @@ class _ClimathonMapState extends State<ClimathonMap> {
       focalLatLng: const MapLatLng(48.14910422668625, 17.107678140831858),
       enableMouseWheelZooming: true,
       maxZoomLevel: 19,
-      zoomLevel: 13,
+      zoomLevel: 11,
       minZoomLevel: 5,
     );
   }
