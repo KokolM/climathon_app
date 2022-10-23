@@ -71,10 +71,16 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_maps/maps.dart';
 
 class ClimathonMap extends StatefulWidget {
+  final List<dynamic> data;
+  final MapMarkerBuilder markerBuilder;
+  final IndexedWidgetBuilder markerTooltipBuilder;
   final List<MapSublayer>? subLayers;
 
   const ClimathonMap({
     Key? key,
+    required this.data,
+    required this.markerBuilder,
+    required this.markerTooltipBuilder,
     this.subLayers,
   }) : super(key: key);
 
@@ -106,6 +112,9 @@ class _ClimathonMapState extends State<ClimathonMap> {
           urlTemplate: 'https://a.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}@2x.png',
           zoomPanBehavior: _zoomPanBehavior,
           sublayers: widget.subLayers,
+          initialMarkersCount: widget.data.length,
+          markerBuilder: widget.markerBuilder,
+          markerTooltipBuilder: widget.markerTooltipBuilder,
         ),
       ],
     );
